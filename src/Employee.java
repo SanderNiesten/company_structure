@@ -5,6 +5,7 @@ public abstract class Employee {
     public double baseSalary;
     private int employeeID;
     private static int count = 0;
+    public Employee manager;
 
     //constructor
     public Employee(String name, double baseSalary) {
@@ -30,7 +31,11 @@ public abstract class Employee {
 
     //Should return a reference to the Employee object that represents this employee's manager
     public Employee getManager() {
-        return;
+        return manager;
+    }
+
+    public void setManager(Employee manager) {
+       this.manager = manager;
     }
 
     public boolean equals(Employee other) {
@@ -43,7 +48,6 @@ public abstract class Employee {
 
     //Should return a String representation of that Employee's current status.
     //This will be different for every subclass of Employee
-    public String employeeStatus() {
-        return;
-    }
+    public abstract String employeeStatus();
+
 }

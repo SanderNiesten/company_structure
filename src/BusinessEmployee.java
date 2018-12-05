@@ -1,3 +1,4 @@
+/*
 public class BusinessEmployee extends Employee {
 
 
@@ -15,5 +16,6 @@ public class BusinessEmployee extends Employee {
     // size of their currently managed budget. Example: "1 Kasey with a budget of 22500.0"
     public String employeeStatus() {
         return this.toString() + " with a budget of " + this.getBonusBudget();
-    }
+
 }
+*/

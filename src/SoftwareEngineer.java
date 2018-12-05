@@ -1,7 +1,6 @@
 public class SoftwareEngineer extends TechnicalEmployee {
     private boolean accessToCode;
     private static int count;
-    private int checkIns;
 
     public SoftwareEngineer(String name) {
         super(name);
@@ -25,17 +24,24 @@ public class SoftwareEngineer extends TechnicalEmployee {
 
     //Should return the current count of how many times this SoftwareEngineer has successfully checked in code
     public int getSuccessfulCheckIns() {
-        return this.checkIns;
+        return checkIns;
     }
 
     //Should check if this SoftwareEngineer's manager approves of their check in. If the check in is approved their
     //successful checkin count should be increased and the method should return "true". If the manager does not approve
-    //the check in the SoftwareEngineer's code access should be changed to false and the method should return "false"
+    //the check in, the SoftwareEngineer's code access should be changed to false and the method should return "false"
+    TechnicalLead manager = (TechnicalLead) this.getManager();
+    public void testManager() {
+        System.out.println(manager);
+    }
+
     public boolean checkInCode() {
-        if () {
-
+        if (manager.approveCheckIn(this)) {
+            this.checkIns++;
+            return true;
         } else {
-
+            this.accessToCode = false;
+            return false;
         }
     }
 }
