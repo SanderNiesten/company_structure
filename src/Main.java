@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        SoftwareEngineer Satya = new SoftwareEngineer("Satya Nadella");
+        SoftwareEngineer Satya = new SoftwareEngineer("Satya");
         TechnicalLead Rolf = new TechnicalLead("Rolf");
         Satya.setManager(Rolf);
 
@@ -18,7 +18,9 @@ public class Main {
         System.out.println("Did manager Rolf approve checkin: " + Rolf.approveCheckIn(Satya));
         System.out.println(Satya.checkIns);
         System.out.println(Satya.getManager());
-        Satya.testManager();
+        Satya.checkInCode();
+        System.out.println(Satya.checkIns);
+
 //        System.out.println(Satya.getSuccessfulCheckIns());
     }
 }
