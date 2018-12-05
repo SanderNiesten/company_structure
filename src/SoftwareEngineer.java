@@ -28,7 +28,7 @@ public class SoftwareEngineer extends TechnicalEmployee{
         // If the check in is approved their successful checkin count should be increased and the method should return "true".
         // If the manager does not approve the check in the SoftwareEngineer's code access should be changed to false and
         // the method should return "false"
-        TechnicalLead manager=(TechnicalLead) this.getManager();
+        TechnicalLead manager = (TechnicalLead) this.getManager();
         if (manager.approveCheckIn(this)){
             this.checkIns++;
             return true;
